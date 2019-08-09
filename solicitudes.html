@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/materialize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="css/iconos.css" rel="stylesheet">
+    <title>Ministerio del Poder Popular para la Educación Universitaria</title>
+</head>
+<body>
+    <header>
+      <div class="navbar-fixed">
+        <nav class="light-blue darken-3 hoverable row">
+          <div class="col s2">
+            <img src="login/img/user.png" height="55px" alt="">
+          </div>
+          <div class="col s9 center">
+            <h4>SVP</h1>
+          </div>
+          <div class="col s1">
+          <div class="fixed-action-btn toolbar">
+            <a class="btn-floating btn-large light-blue darken-4">
+              <i class="large material-icons">more_vert</i>
+            </a>
+            <ul class="margen">
+              <li class="waves-effect waves-bluef"><a href="#!"><i class="material-icons">info</i></a></li>
+              <li class="waves-effect waves-bluef"><a href="#!"><i class="material-icons">notifications</i></a></li>
+              <li class="waves-effect waves-bluef"><a href="#!"><i class="material-icons">power_settings_new</i></a></li>
+            </ul>
+          </div>
+          </div>
+        </nav>
+      </div>
+     </header>
+     <!--CONTENIDO-->
+  <main>
+    <div class="container">
+      <div class="row">
+          <div class="col s2">
+              <a class="btn btn-floating light-blue darken-3 pulse" href="./menu_vacaciones.html"><i class="material-icons">keyboard_return</i></a>
+          </div>
+          <h3 class="center" style="margin-top:50px;">Mis solicitudes</h3>
+      </div>
+      <div class="row" >
+        <div class="col-12">          
+        
+        <table class="highlight responsive-table centered">
+          <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Cédula</th>
+                <th>Oficina</th>
+                <th>Fecha solicitud</th>
+                <th>Fecha inicio</th>
+                <th>Fecha fin</th>
+                <th>Fecha reintegro</th>
+                <th>Periodo</th>
+                <th>Días Solicitados</th>
+                <th>Acción</th>
+            </tr>
+          </thead>
+    
+          <tbody>
+            <tr>
+              <td>Angelo</td>
+              <td>26530665</td>
+              <td>automatizacion de procesos</td>
+              <td>10-04-2019</td>
+              <td>25-04-2019</td>
+              <td>25-05-2019</td>
+              <td>27-05-2019</td>
+              <td>2018-2019</td>
+              <td>30</td>
+
+              <td>
+                <button class="btn-floating btn-large waves-effect waves-light green hoverable btn tooltipped" data-position="bottom" data-tooltip="Aprobar"><i class="material-icons">check</i></button>
+                <button class="btn-floating btn-large waves-effect waves-light red hoverable btn tooltipped" data-position="bottom" data-tooltip="Cancelar"><i class="material-icons">cancel</i></button>
+              </td>
+            </tr>
+            <tbody>
+              <tr>
+                <td>Abraham</td>
+                <td>26194815</td>
+                <td>automatizacion de procesos</td>
+                <td>10-04-2019</td>
+                <td>25-04-2019</td>
+                <td>25-05-2019</td>
+                <td>27-05-2019</td>
+                <td>2018-2019</td>
+                <td>30</td>
+                <td>
+                    <button class="btn-floating btn-large waves-effect waves-light green hoverable btn tooltipped" data-position="bottom" data-tooltip="Aprobar"><i class="material-icons">check</i></button>
+                    <button class="btn-floating btn-large waves-effect waves-light red hoverable btn tooltipped" data-position="bottom" data-tooltip="Cancelar"><i class="material-icons">cancel</i></button>
+                  </td>
+              </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+	<!--pie de la pagina-->
+  <footer class="page-footer hoverable black-text light-blue darken-3">
+    <div class="footer-copyright">
+      <div class="container">
+      © 2019 Copyleft  SIVAPER
+      <a class="white-text right" href="#!">Desarrolladores</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/jquery.js">//notifications_active</script>
+  <script src="js/materialize.js"></script>
+  <script src="js/all.js"></script>
+  <script>
+
+    $(document).ready(function(){
+      $('.tooltipped').tooltip();
+    });
+       
+  </script>
+</body>
+</html>

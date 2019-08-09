@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/materialize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/iconos.css">
+    <title>Ministerio del Poder Popular para la Educación Universitaria</title>
+</head>
+<body>
+    <header>
+      <div class="navbar-fixed">
+        <nav class="light-blue darken-3 hoverable row">
+          <div class="col s2">
+            <img src="image/user.png" height="55px" alt="vacio">
+          </div>
+          <div class="col s9 center">
+            <h4>SVP</h1>
+          </div>
+          <div class="col s1">
+          <div class="fixed-action-btn toolbar">
+            <a class="btn-floating btn-large light-blue darken-4">
+              <i class="large material-icons">more_vert</i>
+            </a>
+            <ul class="margen">
+              <li class="waves-effect waves-bluef"><a href="#!"><i class="material-icons">info</i></a></li>
+              <li class="waves-effect waves-bluef"><a href="#!"><i class="material-icons">notifications</i></a></li>
+              <li class="waves-effect waves-bluef"><a href="login.html"><i class="material-icons">power_settings_new</i></a></li>
+            </ul>
+          </div>
+          </div>
+        </nav>
+      </div>
+     </header>
+     <!--CONTENIDO-->
+    <main>
+	     <div class="container">
+            <div class="row">
+                <div class="col s2">
+                    <a class="btn btn-floating light-blue darken-3 pulse" href="./menu_permisos.html"><i class="material-icons">keyboard_return</i></a>
+                </div>
+                <h3 style="margin-top:50px; margin-left: 400px;">Solicitar Permiso</h3>
+            </div>
+         <div class="row">
+	      <form action="">
+           <div class="col s5">
+             <h5 class="center" style="margin-top:50px;">Fecha Inicio</h5>
+               <div class="input-field">
+                 <input type="date" class="datepicker" name="fi" id="fi">
+                 <input type="hidden" name="fi" id="fi_val">
+               </div>
+           </div>
+           <div class="col s5">
+                <h5 class="center" style="margin-top:50px;">Fecha Fin</h5>
+                <div class="input-field">
+                  <input type="date" class="datepicker" name="ff" id="ff">
+                  <input type="hidden" name="ff" id="ff_val">
+                </div>
+           </div>
+           <div class="col s2">
+                <h5 class="center">Total días</h5>
+                <h3 class="center card-panel light-blue darken-3 white-text">2</h3>
+                <input type="hidden" name="dias">
+           </div>
+        </div>
+        <!--Validar si la fi es igual a la ff-->
+        <div class="row">
+            <div class="col s2">
+                <input class="with-gap" name="group1" type="radio" id="test1" />
+                <label for="test1">Mañana</label>
+            </div>
+            <div class="col s2">
+                <input class="with-gap" name="group1" type="radio" id="test2" />
+                <label for="test2">Tarde</label>
+            </div>
+            <div class="col s2">
+                <input class="with-gap" name="group1" type="radio" id="test3"  />
+                <label for="test3">Completo</label>
+            </div>
+            <div class="col s4">
+                <div class="input-field">
+                    <select>
+                        <option value="" disabled selected>Seleccione un motivo</option>
+                        <option value="1">Fallecimiento de un familiar</option>
+                        <option value="2">Enfermedad</option>
+                        <option value="3">Estudio</option>
+                        <option value="4">Otro</option>
+                    </select>
+                    <label>Motivo</label>
+                </div>
+            </div>
+            <div class="col s2">
+                <input class="with-gap" name="group2" type="radio" id="test4"  />
+                <label for="test4">Remunerado</label>
+                <input class="with-gap" name="group2" type="radio" id="test5" />
+                <label for="test5">No remunerado</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <input type="text" name="descripcion">
+                <label for="textarea1">Descripción</label>
+            </div>
+        </div>
+        <br>
+
+
+        </form>
+        <div class="row">
+           <div class="col s12 center">
+              <h5 class="center" style="margin-top:50px;"></h5>
+                <button class="btn waves-effect light-blue darken-3 hoverable" type="submit" name="action">Solicitar<i class="material-icons right">send</i>
+                </button>
+            </div>
+        </div>
+       </div>
+	  </main>
+	<!--pie de la pagina-->
+  <footer class="page-footer hoverable black-text light-blue darken-3">
+    <div class="footer-copyright">
+      <div class="container">
+      © 2019 Copyleft  SVP
+      <a class="white-text right" href="#!">Desarrolladores</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/jquery.js">//notifications_active</script>
+  <script src="js/materialize.js"></script>
+  <script>
+
+    $('.datepicker').on('mousedown',function(e){
+      e.preventDefault();
+    });
+
+      $('#fi').pickadate({
+        monthsFull: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+        monthsShort: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
+        weekdaysFull: ['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado'],
+        weekdaysShort: ['Dom','Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab'],
+        selectMonths: true, // Creates a dropdown to control month
+        selectYears: 1, // Creates a dropdown of 15 years to control year,
+        min: new Date(),
+        disable: [
+          1,7
+        ],
+        today: 'Hoy',
+        clear: 'Limpiar',
+        close: 'Ok',
+        closeOnSelect: false, // Close upon selecting a date
+      });
+      $('#ff').pickadate({
+        monthsFull: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+        monthsShort: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
+        weekdaysFull: ['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado'],
+        weekdaysShort: ['Dom','Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab'],
+        selectMonths: true, // Creates a dropdown to control month
+        selectYears: 1,
+        min: new Date(), // Creates a dropdown of 15 years to control year,
+        disable: [
+          1,7
+        ],
+        today: 'Hoy',
+        clear: 'Limpiar',
+        close: 'Ok',
+        closeOnSelect: false, // Close upon selecting a date
+        formatSubmit: 'yyyy/mm/dd',
+        hiddenName: true
+      });
+      $('select').material_select();
+  </script>
+</body>
+</html>
